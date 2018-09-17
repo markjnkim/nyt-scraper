@@ -1,7 +1,7 @@
 const axios = require('axios')
 const db = require('../models')
 
-// Defining methods for the nytController
+// NYT API Scraper methods
 
 // findAll searches the NYT API and returns only the entries we haven't already saved
 
