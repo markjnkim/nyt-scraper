@@ -3,7 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const apiRoutes = require("./routes/apiRoutes");
+const apiRoutes = require("./routes/api/apiRoutes");
 const mongoose = require("mongoose");
 
 // Define middleware here
