@@ -16,14 +16,17 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Use apiRoutes
-// app.use("/api", apiRoutes);
+
 app.use(routes);
+// app.use("/", (req,res) => {
+//   res.send("Hello React!")
+// })
 
 // Send every request to the React app
 // Define any API routes before this runs
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
+});
 
 // Connect to the Mongo DB
 mongoose.connect(
